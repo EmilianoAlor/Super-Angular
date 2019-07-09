@@ -1,0 +1,29 @@
+body{
+    /* valores de grosor de area de relleno*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-rendering: optimizeLegibility;
+
+    /* altura del contenido a un cioerto  rango*/
+    position: relative;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smooting: grayscale;
+
+    /* Seleccionamos tipo de letra */
+
+    font-family: 'Courier New', Courier, monospace;
+
+    font-weight: normal;
+    font-size: 1.5em;
+
+    background: linear-gradient(0deg, #b11616 3% ,rgb(235, 227, 163) 50%,rgb(129, 212, 218) 94%);
+}
+
+h1{
+    font-size: 2.0em;
+}
+
+.table-bordered, .table-bordered td, .table-bordered th {
+    border: 1px solid #2F465D;
+}

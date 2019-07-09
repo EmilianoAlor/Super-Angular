@@ -1,0 +1,37 @@
+<div class="container">
+        <form [formGroup]="pedidoForm" (ngSubmit)="submitUpdate()" novalidate>
+            <div *ngIf="MensajeValidar !=''">
+                <h3 class="msnInfo">{{MensajeValidar}}</h3>
+            </div>
+            <div class="form-group">
+                <label>ID Pedido:</label>
+            </div>
+            <div class="form-group">
+                    <label>{{pedido.iddelPedido}}</label>
+                </div>
+            <div class="form-group">
+                <label>ID Usuario:</label>
+                <input type="text" class="form-control" formControlName="idusuario" placeholder={{pedido.idusuario}} requered autofocus/>
+                <!-- <input type="text" class="form-control" formControlName="idusuario" value="John" requered autofocus/> -->
+            </div>
+            <div class="form-group">
+                <label>Precio Total del pedido:</label>
+                <input type="text" class="form-control" formControlName="precioTotalDelPedido" placeholder={{pedido.precioTotalDelPedido}} requered/>
+            </div>
+            <div class="form-group">
+                    <label>Cancelar el pedido:</label>
+                    <input type="text" class="form-control" formControlName="cancelarElPedido" placeholder={{pedido.cancelarElPedido}} requered/>
+            </div>
+            <div class="form-group">
+                <label>Fecha y hora del Pedido:</label>
+            </div>
+            <div class="form-group">
+                    <label>{{pedido.fechaYhoraDelPedido}}</label>
+                </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <br> <br>
+            <p>
+                <a class="btn btn-primary" routerLink="/admin">Volver a la lista completa</a>
+            </p>
+        </form>
+    </div>

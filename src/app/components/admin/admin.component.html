@@ -1,0 +1,23 @@
+<div class="container">
+    <p>
+        <a class="btn btn-primary" routerLink="/">Agregar</a>
+    </p>
+    <table class="table table-bordered table-inverse">
+        <tr>
+            <th>iddelPedido</th>
+            <th>idusuario</th>
+            <th>precioTotalDelPedido</th>
+            <!-- <th>cancelarElPedido</th>
+            <th>fechaYhoraDelPedido</th> -->
+        </tr>
+        <tr *ngFor="let pedido of pedidos">
+            <td>
+                    <a [routerLink]="['/admin/buscar',pedido.iddelPedido]">{{pedido.iddelPedido}}</a>
+            </td>
+            <td>{{pedido.idusuario}}</td>
+            <td>{{pedido.precioTotalDelPedido}}</td>
+            <!-- <td>{{pedido.cancelarElPedido}}</td>
+            <td>{{pedido.fechaYhoraDelPedido}}</td> -->
+        </tr>
+    </table>
+</div>
